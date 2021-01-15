@@ -1,0 +1,150 @@
+// 色
+
+$black: #575757;
+$white: #ffffff;
+$green: #228f8d;
+$half-green: #aad4d2;
+$half-blue: #ebfdff;
+$light-green: #f0f7f6;
+$gray: #e5e5e5;
+$back: rgba(233, 233, 233, 0.1);
+
+// フォントサイズ
+
+$large: 18px;
+$description: 14px;
+$sub: 12px;
+$small: 12px;
+
+// mixin
+
+//　フォント
+
+@mixin large {
+  font-size: $large;
+  font-weight: bold;
+}
+
+@mixin main {
+  font-size: $description;
+  font-weight: bold;
+}
+
+@mixin description {
+  font-size: $description;
+  font-weight: normal;
+}
+
+@mixin sub {
+  font-size: $sub;
+  font-weight: bold;
+}
+
+@mixin small {
+  font-size: $small;
+  font-weight: normal;
+}
+
+//　ボーダー
+
+@mixin borderR {
+  box-shadow: 2px 0 2px 0px rgba(0,0,0,0.11);;
+}
+
+@mixin shadow {
+  box-shadow: 0 3px 0 0 $half-green;
+  border: 1px solid $half-green;
+}
+
+@mixin border {
+  border: 3px solid rgba( 170, 212, 210, 0.2 );
+}
+
+//　角丸
+
+@mixin radius {
+  border-radius: 25px;
+}
+
+@mixin radiusS {
+  border-radius: 10px;
+}
+
+@mixin radiusL {
+  border-radius: 40px 0 0 40px;
+}
+
+// box要素
+
+@mixin containTop {
+  padding-top: 50px;
+}
+
+@mixin contain {
+  padding: 50px 0;
+}
+
+@mixin containBottom {
+  padding-bottom: 50px;
+}
+
+@mixin containMargin {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+//　flexbox
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin column {
+  display: flex;
+  align-items: center;
+}
+
+@mixin columnCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+//共通CSS
+
+.title-box {
+  @include center;
+  padding-bottom: 35px;
+
+  .title-border {
+    display: block;
+    height: 1px;
+    width: 20px;
+    background-color: $black;
+    margin:  0 20px;
+  }
+
+  .title-img {
+    margin-right: 10px;
+  }
+
+  .title {
+    @include large;
+    color: $black;
+  }
+}
+
+.btn {
+	width: 40px;
+}
+

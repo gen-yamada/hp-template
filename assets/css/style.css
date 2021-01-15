@@ -1,0 +1,145 @@
+/* デフォルトCSS */
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.fadeInUp {
+	opacity: 0;
+	transform: translate(0, 60px)
+}
+
+.is-fadeInUp {
+	opacity: 1;
+	transition: opacity .8s linear 0s, transform .9s cubic-bezier(.165, .84, .44, 1) 0s;
+	transform: translate(0, 0);
+}
+
+/* レスポンシブ対応 */
+
+/* スマホサイズ */
+
+@media screen and (max-width:759px) { 
+	.contain {
+		width: 95%;
+		margin: 0 auto;
+	}
+	.footer-nav-li {
+		width: 100%;
+	}
+	.footer-img-box {
+		width: 100%;
+	}
+	.footer-text-box {
+		width: 100%;
+	}
+	.footer-text {
+		text-align: center;
+		margin: 30px 0;
+	}
+	.menu-btn {
+		width: 22%;
+		margin: 0 1.5%;
+	}
+	.menu {
+		padding: 20px 0;
+	}
+	.box {
+		width: 100%;
+	}
+	.sidebar {
+		left: -200px;
+		opacity: 0;
+	}
+}
+
+/* タブレットサイズ */
+
+@media screen and (min-width:760px) and ( max-width:1024px) {
+	.contain {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.footer-nav-li {
+		width: 20%;
+	}
+	.footer-img-box {
+		width: 50%;
+	}
+	.footer-text-box {
+		width: 50%;
+	}
+	.footer-text {
+		display: flex;
+		align-items: center;
+		margin: 20px 0;
+	}
+	.menu-btn {
+		width: 21%;
+		margin: 0 2%;
+	}
+	.menu {
+		padding: 30px;
+	}
+	.box {
+		margin-left: 200px;
+	}
+	.sidebar {
+		left: 0;
+		opacity: 1;
+	}
+	.phone {
+		position: absolute;
+		top: -100%;
+		height: 0;
+	}
+}
+
+/* PCサイズ */
+
+@media screen and (min-width:1024px) {
+	.contain {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.footer-nav-li {
+		width: 20%;
+	}
+	.footer-img-box {
+		width: 50%;
+	}
+	.footer-text-box {
+		width: 50%;
+	}
+	.footer-text {
+		display: flex;
+		align-items: center;
+	}
+	.menu-btn {
+		width: 21%;
+		margin: 0 2%;
+	}
+	.menu {
+		padding: 40px;
+	}
+	.box {
+		margin-left: 200px;
+	}
+	.sidebar {
+		left: 0;
+		opacity: 1;
+	}
+	.phone {
+		position: absolute;
+		top: -100%;
+		height: 0;
+	}
+}
